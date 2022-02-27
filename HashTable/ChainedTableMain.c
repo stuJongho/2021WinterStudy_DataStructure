@@ -1,8 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<conio.h>
+#include <termio.h>
 #include "Person.h"
 #include "Table2.h"
+
+int getch(void)
+{
+	int ch;
+	struct termios old;
+	struct termios new;
+	tcgetattr(0, &old);
+	new = old;
+	new.c_lflag &= ~(ICANON | ECHO);
+	new.c_cc[VMIN] = 1;
+	new.c_cc[VTIME] = 0;
+	tcsetattr(0, TCSAFLUSH, &new);
+	ch = getchar();
+	tcsetattr(0, TCSAFLUSH, &old);
+	return ch;
+}
 
 int MyHashFunc(int k)
 {
@@ -62,7 +78,7 @@ int main(void)
 		case 2:
 			printf("찾으실 사람의 주민등록 번호를 입력하여 주세요.\n");
 			SearchPerson();
-			_getch();
+			getch();
 			break;
 
 		case 3:

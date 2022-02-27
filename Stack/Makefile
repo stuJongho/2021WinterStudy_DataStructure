@@ -1,5 +1,5 @@
 CC = gcc
-NAME = program.exe
+NAME = program.out
 
 .PHONY : clean
 
@@ -13,4 +13,4 @@ ListBaseStackMain.o : ListBaseStackMain.c
 	$(CC) -c $<
 
 clean :
-	del -rf *.o $(NAME)
+	rm -rf *.o $(NAME)

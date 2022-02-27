@@ -2,23 +2,23 @@ CC = gcc
 
 .PHONY : clean
 
-all : SortingMain.c BubbleSort.exe HeapSort.exe MergeSort.exe QuickSort.exe SelectionSort.exe
-	gcc $< -o program
+all : SortingMain.c BubbleSort.out HeapSort.out MergeSort.out QuickSort.out SelectionSort.out
+	gcc $< -o program.out
 
-BubbleSort.exe : BubbleSort.c
+BubbleSort.out : BubbleSort.c
 	gcc $< -o $@
 
-HeapSort.exe : HeapSort.c
+HeapSort.out : HeapSort.c
 	gcc $< -o $@
 
-MergeSort.exe : MergeSort.c
+MergeSort.out : MergeSort.c
 	gcc $< -o $@
 
-QuickSort.exe : QuickSort.c
+QuickSort.out : QuickSort.c
 	gcc $< -o $@
 
-SelectionSort.exe : SelectionSort.c
+SelectionSort.out : SelectionSort.c
 	gcc $< -o $@
 
 clean :
-	del -rf *.exe
+	rm -rf *.out

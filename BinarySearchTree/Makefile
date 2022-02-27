@@ -1,5 +1,5 @@
 CC = gcc
-NAME = program.exe
+NAME = program.out
 
 .PHONY : clean
 
@@ -16,4 +16,4 @@ BinaryTree2.o : BinaryTree2.c BinaryTree2.h
 	$(CC) -c BinaryTree2.c
 
 clean :
-	del -f *.o $(NAME)
+	rm -f *.o $(NAME)

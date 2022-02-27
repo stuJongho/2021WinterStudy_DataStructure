@@ -1,5 +1,5 @@
 CC = gcc
-NAME = program.exe
+NAME = program.out
 
 .PHONY : clean
 
@@ -19,4 +19,4 @@ Table2.o : Table2.c
 	$(CC) -c $<
 
 clean : 
-	del -f *.o $(NAME)
+	rm -f *.o $(NAME)
