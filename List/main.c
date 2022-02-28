@@ -13,6 +13,7 @@ int main(void)
     // 0: 데이터 삽입, 1: 데이터 삭제, 2: 프로그램 종료
     while (1)
     {
+        printf("0: 데이터 삽입, 1: 데이터 삭제, 2: 프로그램 종료\n");
         printf("select menu: ");
         scanf("%d", &userSelect);
         

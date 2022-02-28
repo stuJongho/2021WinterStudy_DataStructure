@@ -64,7 +64,7 @@ int main(void)
 
 	do
 	{
-		system("cls");
+		system("clear");
 		printf("1. 사람 추가, 2. 사람 검색, 3. 사람 삭제, 0. 종료\n");
 		scanf("%d", &choice);
 

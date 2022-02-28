@@ -74,7 +74,7 @@ int main(void){
         // printf("\n");
     }
     end = clock();
-    printf("%.0lfms", (double)(end - start));
+    printf("%.0lfms", (double)(end - start)/1000);
 
     return 0;
 }

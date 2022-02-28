@@ -36,5 +36,9 @@ int main(void)
 	clNode = GetLeftSubTree(clNode);
 	crNode = GetRightSubTree(crNode);
 	printf("왼쪽4: %d, 오른쪽4: %d \n", GetData(clNode), GetData(crNode));
+
+	char ch;
+    printf("Press ENTER key to Continue\n");
+    scanf("%c",&ch);
 	return 0;
 }

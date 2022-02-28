@@ -7,9 +7,9 @@ int main(void){
 
     for (int i = 0; i < sizeof(programs) / sizeof(char*); i++)
     {
-        char command[40] = ".\\";
+        char command[40] = "./Sorting/";
         strcat(command, programs[i]);
-        strcat(command, ".exe");
+        strcat(command, ".out");
 
         printf("- %s\n", programs[i]);
         for (int j = 0; j < 3; j++)
@@ -17,7 +17,11 @@ int main(void){
             system(command);
             printf("\n");
         }
-        
     }
-    
+
+    char ch;
+    printf("Press ENTER key to Continue\n");
+    scanf("%c",&ch);
+
+    return 0;
 }
